@@ -33,7 +33,7 @@ def setup_venv(file_name):
     print(f"Opening {file_name} in VS Code...")
 
     try:
-        subprocess.run([r"C:\Users\ADMIN\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd", '.'], check=True)
+        subprocess.run(["powershell", "-Command" ,"code", f'"{new_path}"'], check=True)
     except FileNotFoundError as e:
         print(f"FileNotFoundError: {e}")
     except subprocess.CalledProcessError as e:
